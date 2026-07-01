@@ -1,0 +1,26 @@
+# Business Account Opening Process
+
+This process flow illustrates a sample end-to-end workflow for opening a business checking account. It demonstrates how a business analyst can document customer journeys, decision points, workflow automation, exception handling, and stakeholder interactions.
+
+> **Portfolio Note:** This is an original example created for demonstration purposes and does not contain confidential or proprietary information from any employer.
+
+```mermaid
+flowchart TD
+    A[Customer Starts Application] --> B[Enter Business Information]
+    B --> C[Upload Required Documents]
+    C --> D{Information Complete?}
+
+    D -- No --> E[Notify Customer of Missing Information]
+    E --> B
+
+    D -- Yes --> F[Identity Verification]
+    F --> G[Compliance Review]
+    G --> H{Approved?}
+
+    H -- No --> I[Request Additional Information]
+    I --> B
+
+    H -- Yes --> J[Create Business Account]
+    J --> K[Send Welcome Email]
+    K --> L[Account Active]
+```
